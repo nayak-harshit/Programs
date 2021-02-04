@@ -1,6 +1,8 @@
+// this program will tell weather a number is prime or not
+// Author@NAYAK
+
 import java.util.Scanner;
 
-// this program will tell weather a number is prime or not
 public class prime_number {
 
 public static void main(String[] args) {
