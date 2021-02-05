@@ -5,6 +5,8 @@
  **
  *
 */
+// Author@NAYAK
+
 public class pattern2 {
     static void pattern(){
      for (int i = 0; i < 5; i++) {
