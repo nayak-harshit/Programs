@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Test_your_luck_GUI">
+  <grid id="27dc6" binding="form" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="20" y="20" width="500" height="400"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="f6dff" class="javax.swing.JButton" binding="testYourLuckButton" default-binding="true">
+        <constraints border-constraint="Center"/>
+        <properties>
+          <font name="Harrington" size="18" style="1"/>
+          <text value="Test Your Luck"/>
+        </properties>
+      </component>
+      <component id="5e543" class="javax.swing.JLabel">
+        <constraints border-constraint="North"/>
+        <properties>
+          <font name="Brush Script MT" size="26" style="1"/>
+          <text value="Test Your Luck"/>
+        </properties>
+      </component>
+      <component id="26f85" class="javax.swing.JLabel" binding="luck">
+        <constraints border-constraint="South"/>
+        <properties>
+          <font name="Algerian" size="26" style="1"/>
+          <text value="Your Luck here"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

@@ -14,9 +14,9 @@ import java.util.Scanner;
         int one = r.nextInt(10);
         int two = r.nextInt(10);
         int three = r.nextInt(10);
-        // printing the three numbres:
+        // printing the three numbers:
         System.out.printf("Your Three numbers are \n %d %d %d \n " ,one ,two, three);
-        // comaring the numbers
+        // comparing the numbers
         if (one == two && two == three){// if all are same you are very lucky
             System.out.println("You are very Lucky Today");
         }
