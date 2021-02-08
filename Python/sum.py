@@ -10,5 +10,7 @@ num2 = input()
 # the 'int(num1)' converts the input to integer..
 sum = int(num1) + int(num2)
 # printing the sum
-print("The sum of ", num1, "and", num2,"is", sum)
+# print("The sum of ", num1, "and", num2,"is", sum)
+print("The sum of {0} and {1} is {2}" .format(num1, num2, sum))
+
 
