@@ -19,9 +19,9 @@ public class Bubble_Sort {
         int[] ar = new int[5];
         ar[0] = 1;
         ar[1] = -5;
-        ar[2] = 2;
-        ar[3] = 9;
-        ar[4] = 3;
+        ar[2] = -2;
+        ar[3] = 0;
+        ar[4] = -59;
 
         int[] s = bubblesort(ar);
         for (int i = 0; i < s.length; i++) {
@@ -31,14 +31,16 @@ public class Bubble_Sort {
     }
     public static int[] bubblesort(int a[]){
         for (int i = 0; i <= a.length-1; i++) {
-
+                boolean sorted = true;
             for (int j = i; j < a.length-1-i; j++) {
                 if(a[j] > a[j+1]){
                     int temp = a[j];
                     a[j] = a[j+1];
                     a[j+1] = temp;
+                    sorted = false;
                 }
             }
+            if(sorted) break;
         }
 
         return a;
