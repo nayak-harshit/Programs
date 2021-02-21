@@ -1,0 +1,34 @@
+import java.util.Arrays;
+
+/* An anagram of a string is another string that contains the same characters,
+ only the order of characters can be different.
+  For example, “abcd” and “dabc” are an anagram of each other.
+  Anagram Words:-
+  Listen - Silent
+  Triangle - Integral
+
+*/
+public class Anagram_strings {
+    public static void main(String[] args) {
+        System.out.println(anagram("abc", "bac"));
+    }
+
+    public static boolean anagram(String a, String b){
+        char[] ar = a.toCharArray();
+        char[] br = b.toCharArray();
+        Arrays.sort(ar);
+        Arrays.sort(br);
+        if(ar.length == br.length){
+            boolean eq = true;
+          equal:  for (int i = 0; i <ar.length ; i++) {
+                if(ar[i] != br[i]){
+                    eq = false;
+                    break equal;
+                }
+          }
+            return eq;
+        }
+        return false;
+    }
+
+}
