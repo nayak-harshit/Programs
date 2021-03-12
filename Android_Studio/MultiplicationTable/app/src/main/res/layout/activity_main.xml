@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30sp"
+        android:padding="10sp"
+        android:text="Enter the number for table"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:orientation="horizontal"
+        android:padding="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <EditText
+            android:id="@+id/num"
+            android:layout_width="151dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:hint="number"
+            android:inputType="number"
+            android:padding="10sp"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10sp"
+            android:padding="10sp"
+            android:text="Table"
+            android:textSize="15sp"
+            android:onClick="table"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:orientation="vertical"
+        android:padding="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        android:layout_marginBottom="30sp">
+
+        <TextView
+            android:id="@+id/multiply1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:text="    "
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/multiply2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:text="    "
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/multiply3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:text="    "
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/multiply4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:text="    "
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/multiply5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:text="    "
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/multiply6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:text="    "
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/multiply7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:text="    "
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/multiply8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:text="    "
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/multiply9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:text="    "
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/multiply10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:text="    "
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
