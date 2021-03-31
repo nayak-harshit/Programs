@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">loginUI</string>
+    <string name="forgot">Forgot your password <b>Help</b></string>
+</resources>
