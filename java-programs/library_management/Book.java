@@ -4,9 +4,18 @@ public class Book {
     private String name;
     private Integer price;
     private String author;
+    private String publisher;
     private  String book_id;
     private static int idGenereator = 1;
     private boolean isAvailabe;
+
+    public String getPublisher() {
+        return publisher;
+    }
+
+    public void setPublisher(String publisher) {
+        this.publisher = publisher;
+    }
 
     public String getBook_id() {
         return book_id;
@@ -20,9 +29,6 @@ public class Book {
         isAvailabe = availabe;
     }
 
-    public void setBook_id(String book_id) {
-        this.book_id = book_id;
-    }
 
     public String getName() {
         return name;
@@ -66,6 +72,7 @@ public class Book {
                 "name='" + name + '\'' +
                 ", price=" + price +
                 ", author='" + author + '\'' +
+                ", publisher='" + publisher + '\'' +
                 ", book_id='" + book_id + '\'' +
                 ", isAvailabe=" + isAvailabe +
                 '}';

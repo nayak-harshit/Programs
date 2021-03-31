@@ -3,8 +3,8 @@ package library_management;
 import java.util.ArrayList;
 
 public class library {
-   ArrayList<Book> books = new ArrayList<>();
-   ArrayList<User> users = new ArrayList<>();
+      public ArrayList<Book> books = new ArrayList<>();
+  public ArrayList<User> users = new ArrayList<>();
 
 
 
@@ -35,7 +35,7 @@ public class library {
        book.setAvailabe(true);
         System.out.println(book.getName()+ " has been returned by "+ user.getName());
     }
-
+    // searchbook could be optimised
     public boolean searchbook(String name){
         for (Book b:books) {
            String bookName = b.getName().toLowerCase();
@@ -44,5 +44,30 @@ public class library {
         }
        return false;
     }
+
+    // for editing user and book details:
+    public void changeUserName(User user, String name){
+       user.setName(name);
+    }
+    public void changeUserAge(User user, Integer age){
+       user.setAge(age);
+    }
+    public void changeUserAddress(User user, String address){
+       user.setAddress(address);
+    }
+    public void changeBookName(Book book, String name){
+       book.setName(name);
+    }
+    public void changeBookPrice(Book book, int price){
+       book.setPrice(price);
+    }
+  public void changeBookAuthor(Book book,String author){
+       book.setAuthor(author);
+    }
+  public void changeBookPublisher(Book book, String publisher){
+      book.setPublisher(publisher);
+    }
+
+
     
 }

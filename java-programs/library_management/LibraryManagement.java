@@ -15,6 +15,15 @@ public class LibraryManagement {
         System.out.println(maths.toString());
         System.out.println(lit.toString());
 
+        library library = new library();
+        library.books.add(maths);
+        library.books.add(lit);
+        library.users.add(dhruv);
+        library.users.add(rishi);
+
+        library.issueBook(maths, dhruv);
+        System.out.println(maths.toString());
+
     }
 
 }
