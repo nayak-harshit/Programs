@@ -22,7 +22,15 @@ public class LibraryManagement {
         library.users.add(rishi);
 
         library.issueBook(maths, dhruv);
+        library.issueBook(maths, rishi);// trying to issue a issued book
         System.out.println(maths.toString());
+
+        library.changeUserName(rishi, "RishiMaster");
+        System.out.println(rishi.toString());
+
+
+        System.out.println( library.searchbook("maths"));
+        library.returnBook(maths, dhruv);
 
     }
 

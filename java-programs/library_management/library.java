@@ -28,12 +28,22 @@ public class library {
    }
 
    public void issueBook(Book book, User user){
-       book.setAvailabe(false);
-       System.out.println(book.getName()+ " has been issued by "+ user.getName());
+       if(book.isAvailabe()) {
+           book.setAvailabe(false);
+           System.out.println(book.getName() + " has been issued by " + user.getName());
+       }
+       else{
+           System.out.println("Book is not available");
+       }
     }
     public void returnBook(Book book, User user){
-       book.setAvailabe(true);
-        System.out.println(book.getName()+ " has been returned by "+ user.getName());
+       if(book.isAvailabe()){
+           System.out.println("Book is already here");
+       }
+      else {
+           book.setAvailabe(true);
+           System.out.println(book.getName() + " has been returned by " + user.getName());
+       }
     }
     // searchbook could be optimised
     public boolean searchbook(String name){
