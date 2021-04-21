@@ -15,12 +15,12 @@ import java.util.Arrays;
 */
 public class Anagram_strings {
     public static void main(String[] args) {
-        System.out.println(anagram("abc", "bac"));
+        System.out.println(anagram("harshit", "nayak"));
     }
-    /*
+    /**
     * @param a this is 1st string
     * @param b this is 2nd string
-    * @return boolean if it ianagram or not
+    * @return boolean if it is anagram or not
     *   */
     public static boolean anagram(String a, String b){
         char[] ar = a.toCharArray();
