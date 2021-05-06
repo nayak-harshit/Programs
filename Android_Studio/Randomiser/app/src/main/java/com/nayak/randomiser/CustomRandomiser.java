@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.Random;
 
@@ -22,13 +21,26 @@ public class CustomRandomiser extends AppCompatActivity {
 TextView textView;
     EditText editText;
     public void random(View view) {
+        System.out.println("hello");
+
         editText = findViewById(R.id.number);
-        textView = findViewById(R.id.rand);
-        int a = Integer.getInteger(editText.getText().toString());
+        textView = findViewById(R.id.randumNumberDisplay);
+        System.out.println("hello2");
+//        int a = Integer.getInteger(editText.getText().toString());
+//        int a = 10;
+//        int a = Integer.getInteger(editText.getText().toString());
+        int bound = 0;
+        System.out.println("hello3");
+        System.out.println("THE Random number is "+bound);
+        bound = Integer.valueOf(editText.getText().toString());
+        System.out.println("THE Random number is "+bound);
+
+        System.out.println("hello4");
         Random random = new Random();
-        int b = Math.abs(a);
-        int nu = random.nextInt(b);
-        String nm = String.valueOf(b);
-        textView.setText(nm);
+
+        int nu = random.nextInt(bound);
+        String str = ""+nu;
+        textView.setText(str);
+
     }
 }

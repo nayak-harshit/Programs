@@ -1,9 +1,8 @@
 import java.util.Arrays;
 
-/*
-    @author NAYAK
-    @version 2
-    @seek nayak
+/**
+ *  @author NAYAK
+  
 
     An anagram of a string is another string that contains the same characters,
     only the order of characters can be different.
