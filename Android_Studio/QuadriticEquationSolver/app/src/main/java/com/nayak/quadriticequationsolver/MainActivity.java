@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
         inpA = findViewById(R.id.inputA);
         inpB = findViewById(R.id.inputB);
+
         inpC = findViewById(R.id.inputC);
 
         root1 = findViewById(R.id.root1);
@@ -51,8 +52,8 @@ public class MainActivity extends AppCompatActivity {
             warning.setText("Roots are not real.");
         }
 
-        double soln1 = (-v -b)/2*a;
-        double soln2 = (v -b)/2*a;
+        double soln1 = (-v -b)/(2*a);
+        double soln2 = (v -b)/(2*a);
 
         System.out.println(soln1);
         System.out.println(soln2);
