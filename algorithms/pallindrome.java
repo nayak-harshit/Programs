@@ -1,20 +1,18 @@
 public class pallindrome {
 public static void main(String[] args) {
-    System.out.println(isPallidrome("121"));
+    System.out.println(isPalllindrome("aba"));
 }
-public static boolean isPallidrome(String a) {
-    return (a.equals(reverseString(a)));
-
-}
-public static String reverseString (String a) {
-    char[] arr  = a.toCharArray();
-    int len = arr.length;
-    char[] revArr = new char[len];
-    for (int i = 0; i < len; i++) {
-        revArr[len-i] = arr[i]; 
-    }
-    return revArr.toString();
-    
+public static Boolean isPalllindrome (String a) {
+    return a.equals(reverseString(a));
 }
 
+ public static String  reverseString(String s) {
+    // String reverse = "";
+    char[] sChar = s.toCharArray();
+    char[] result = new char[sChar.length];
+    for (int i = 0; i < sChar.length; i++) {
+        result[i] = sChar[sChar.length-i-1];
+    }      
+    return String.valueOf(result);
+ }
 }
