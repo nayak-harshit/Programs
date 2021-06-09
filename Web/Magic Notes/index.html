@@ -28,10 +28,17 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Bookmarks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Favourites</a>
+                    </li>
                 </ul>
                 <form class="d-flex">
-                    <input class="form-control me-2" id="searchTxt" type="search" placeholder="Search" aria-label="Search">
-                   
+                    <input class="form-control me-2" id="searchTxt" type="search" placeholder="Search"
+                        aria-label="Search">
+
                 </form>
             </div>
         </div>
@@ -43,7 +50,8 @@
             <div class="card-body">
                 <h5 class="card-title">Add a Note</h5>
                 <div class="input-group">
-                    <textarea class="form-control" id="addTxt" aria-label="With textarea"> Your Note here</textarea>
+                    <textarea class="form-control" id="addTxt" placeholder=" Your Note here"
+                        aria-label="With textarea"></textarea>
                 </div>
                 <button class="btn btn-primary my-2" id="addBtn">Add Note</button>
             </div>
@@ -52,8 +60,21 @@
         <h1>Your Notes</h1>
         <hr>
         <div id="notes" class="row container-fluid">
-
+            <div class="noteCard my-2 mx-2 card">
+                <!-- <div class="card-body">
+                    <h5 class="card-title">Note ${index + 1}</h5>
+                    <p class="card-text"> ${element}</p>
+                    <button id="${index}"onclick="deleteNote(this.id)" class="btn btn-primary">Delete Note</button> <button value="${index}" onclick="editNote(this.value)" class="btn btn-primary">Edit Note</button>
+                </div>
+            </div> <div class="noteCard my-2 mx-2 card" >
+                <div class="card-body">
+                    <h5 class="card-title">Note ${index + 1}</h5>
+                    <p class="card-text"> ${element}</p>
+                    <button id="${index}"onclick="deleteNote(this.id)" class="btn btn-primary">Delete Note</button> <button value="${index}" onclick="editNote(this.value)" class="btn btn-primary">Edit Note</button> -->
+            </div>
         </div>
+
+    </div>
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
