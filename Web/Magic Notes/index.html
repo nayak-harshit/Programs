@@ -45,11 +45,15 @@
     </nav>
 
     <div class="container my-3">
-        <h1>Welcome to Magic Notes</h1>
+        <h1 class="my-1">Welcome to Magic Notes</h1>
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Add a Note</h5>
                 <div class="input-group">
+                    <!-- <div class="input-group input-group-lg">
+                        <input type="text" class="form-control" aria-label="Sizing example input" placeholder="Title"
+                            aria-describedby="inputGroup-sizing-lg">
+                    </div> -->
                     <textarea class="form-control" id="addTxt" placeholder=" Your Note here"
                         aria-label="With textarea"></textarea>
                 </div>
@@ -60,21 +64,24 @@
         <h1>Your Notes</h1>
         <hr>
         <div id="notes" class="row container-fluid">
-            <div class="noteCard my-2 mx-2 card">
-                <!-- <div class="card-body">
-                    <h5 class="card-title">Note ${index + 1}</h5>
-                    <p class="card-text"> ${element}</p>
-                    <button id="${index}"onclick="deleteNote(this.id)" class="btn btn-primary">Delete Note</button> <button value="${index}" onclick="editNote(this.value)" class="btn btn-primary">Edit Note</button>
-                </div>
-            </div> <div class="noteCard my-2 mx-2 card" >
+            <div class="noteCard my-2 mx-2 card " style="width: 20rem;">
                 <div class="card-body">
                     <h5 class="card-title">Note ${index + 1}</h5>
                     <p class="card-text"> ${element}</p>
-                    <button id="${index}"onclick="deleteNote(this.id)" class="btn btn-primary">Delete Note</button> <button value="${index}" onclick="editNote(this.value)" class="btn btn-primary">Edit Note</button> -->
+                    <button id="${index}" onclick="deleteNote(this.id)" class="btn btn-primary">Delete Note</button>
+                    <button value="${index}" onclick="editNote(this.value)" class="btn btn-primary">Edit Note</button>
+                </div>
             </div>
-        </div>
+           <!--  <div class="noteCard my-2 mx-2 card">
+                <div class="card-body">
+                    <h5 class="card-title">Note ${index + 1}</h5>
+                    <p class="card-text"> ${element}</p>
+                    <button id="${index}" onclick="deleteNote(this.id)" class="btn btn-primary">Delete Note</button>
+                    <button value="${index}" onclick="editNote(this.value)" class="btn btn-primary">Edit Note</button>
+                </div> -->
+            </div>
 
-    </div>
+        </div>
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
