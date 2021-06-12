@@ -13,7 +13,11 @@
 
 <body>
 
-
+    <style>
+        body {
+            background-color:rgba(241, 240, 233, 0.822);
+        }
+    </style>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
@@ -50,21 +54,39 @@
             <div class="card-body">
                 <h5 class="card-title">Add a Note</h5>
                 <div class="input-group">
-                    <!-- <div class="input-group input-group-lg">
-                        <input type="text" class="form-control" aria-label="Sizing example input" placeholder="Title"
+                    <div class="input-group input-group-lg">
+                        <input type="text" id="addTitle" class="form-control" aria-label="Sizing example input" placeholder="Title"
                             aria-describedby="inputGroup-sizing-lg">
-                    </div> -->
+                    </div>
                     <textarea class="form-control" id="addTxt" placeholder=" Your Note here"
                         aria-label="With textarea"></textarea>
                 </div>
                 <button class="btn btn-primary my-2" id="addBtn">Add Note</button>
+                    <!-- PRE-BOOKMARK-SVG -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-plus " id="preBookmark"  viewBox="0 0 16 16">
+                        <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+                        <path d="M8 4a.5.5 0 0 1 .5.5V6H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V7H6a.5.5 0 0 1 0-1h1.5V4.5A.5.5 0 0 1 8 4z"/>
+                      </svg>
+                    <!-- POST-BOOKMARK-SVG -->
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-check-fill d-none" id="postBookmark" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zm8.854-9.646a.5.5 0 0 0-.708-.708L7.5 7.793 6.354 6.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                      </svg>
+
+                  <!-- PRE-FAVOURITE-SVG -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" id="preFav" viewBox="0 0 16 16">
+                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                  </svg>
+                  <!-- POST-FAVOURITE-SVG -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill d-none" id="postFav" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                  </svg>
             </div>
         </div>
         <hr>
         <h1>Your Notes</h1>
         <hr>
         <div id="notes" class="row container-fluid">
-            <div class="noteCard my-2 mx-2 card " style="width: 20rem;">
+            <!-- <div class="noteCard my-2 mx-2 card " style="width: 20rem;">
                 <div class="card-body">
                     <h5 class="card-title">Note ${index + 1}</h5>
                     <p class="card-text"> ${element}</p>
@@ -72,16 +94,16 @@
                     <button value="${index}" onclick="editNote(this.value)" class="btn btn-primary">Edit Note</button>
                 </div>
             </div>
-           <!--  <div class="noteCard my-2 mx-2 card">
+            <div class="noteCard my-2 mx-2 card">
                 <div class="card-body">
                     <h5 class="card-title">Note ${index + 1}</h5>
                     <p class="card-text"> ${element}</p>
                     <button id="${index}" onclick="deleteNote(this.id)" class="btn btn-primary">Delete Note</button>
                     <button value="${index}" onclick="editNote(this.value)" class="btn btn-primary">Edit Note</button>
-                </div> -->
-            </div>
-
+                </div>  -->
         </div>
+
+    </div>
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
