@@ -1,15 +1,21 @@
 body{
-    background-color: aqua;
+    /* background-color: aqua; */
     padding: 5%;
 }
 
 #heading{
-    width: 50%;
+    /* width: 50%; */
     margin: auto;
 }
 
 #num{
+     
+       margin: 10%;
 
+}
+#button{
+    padding: 5%;
+    margin-top:10px;
 }
 
 #span{
