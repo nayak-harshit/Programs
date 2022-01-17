@@ -3,8 +3,8 @@ import java.util.ArrayList;
 public class primeFactors {
     public static void main(String[] args) {
         System.out.println(isPrime(999999937));
-        System.out.println(nextPrime(521164));
-        ArrayList<Integer> arr = primeFactorisation(654213);
+        System.out.println(nextPrime(7));
+        ArrayList<Integer> arr = primeFactorisation(50);
         for (int i = 0; i < arr.size(); i++) {
             System.out.println(arr.get(i));
         }
@@ -49,17 +49,26 @@ public class primeFactors {
     public static ArrayList<Integer> primeFactorisation(int n) {
         ArrayList<Integer> primeFactors = new ArrayList<Integer>();
         int quot = n;
-        for (int i = 2; i <n; i++) {
-            
-            if (isPrime(i) && isFactor(quot, i)) {
-                 primeFactors.add(i);
-                quot = quot/i;
+        // for (int i = 2; i <n; i++) {
+
+        // if (isPrime(i) && isFactor(quot, i)) {
+        // primeFactors.add(i);
+        // quot = quot/i;
+        // }
+        // }
+
+        int factor = 2;
+        while (quot != 1) {
+            if ( isFactor(quot, factor)) {
+                primeFactors.add(factor);
+                quot = quot / factor;
+            }else{
+                factor = nextPrime(factor);
             }
         }
 
         return primeFactors;
 
     }
-
 
 }
