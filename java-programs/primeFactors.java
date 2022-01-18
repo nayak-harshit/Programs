@@ -59,10 +59,10 @@ public class primeFactors {
 
         int factor = 2;
         while (quot != 1) {
-            if ( isFactor(quot, factor)) {
+            if (isFactor(quot, factor)) {
                 primeFactors.add(factor);
                 quot = quot / factor;
-            }else{
+            } else {
                 factor = nextPrime(factor);
             }
         }
