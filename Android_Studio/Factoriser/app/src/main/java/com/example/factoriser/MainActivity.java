@@ -1,20 +1,42 @@
+package com.example.factoriser;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
 import java.util.ArrayList;
 
-public class primeFactors {
-    public static void main(String[] args) {
-        System.out.println(isPrime(999999937));
-        System.out.println(nextPrime(7));
-        ArrayList<Integer> arr = primeFactorisation(50);
-        for (int i = 0; i < arr.size(); i++) {
-            System.out.println(arr.get(i));
-        }
-        System.out.println(displayPrimeFactor(arr));
+public class MainActivity extends AppCompatActivity {
+    EditText editText;
+    Button button;
+    TextView textView;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        editText = findViewById(R.id.editText);
+        textView = findViewById(R.id.textView);
+        button = findViewById(R.id.button);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+
+            }
+        });
+
+
     }
 
     public static boolean isFactor(int x, int n) {
-        if (x % n == 0)
-            return true;
-        return false;
+        return x % n == 0;
     }
 
     public static boolean isPrime(int n) {
@@ -50,13 +72,7 @@ public class primeFactors {
     public static ArrayList<Integer> primeFactorisation(int n) {
         ArrayList<Integer> primeFactors = new ArrayList<Integer>();
         int quot = n;
-        // for (int i = 2; i <n; i++) {
 
-        // if (isPrime(i) && isFactor(quot, i)) {
-        // primeFactors.add(i);
-        // quot = quot/i;
-        // }
-        // }
 
         int factor = 2;
         while (quot != 1) {
@@ -67,33 +83,8 @@ public class primeFactors {
                 factor = nextPrime(factor);
             }
         }
-
         return primeFactors;
 
     }
-
-   public static String displayPrimeFactor(ArrayList arrayList) {
-        String result = "";
-        int n = 0;
-
-        do{
-            int i = (Integer)arrayList.get(n);
-            int frequency = 0;
-            while(i == (Integer)arrayList.get(n)){
-                frequency++;
-                if(i != (Integer)arrayList.get(n+1)){
-                    result+= i + "^"+ frequency + " ";
-                    continue;
-                }
-
-                n++;
-            }
-
-            n++;
-        }while((Integer)arrayList.size() != n+1);
-
-
-        return result;
-   }
 
 }
