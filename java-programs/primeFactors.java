@@ -1,22 +1,36 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class primeFactors {
     public static void main(String[] args) {
         System.out.println(isPrime(999999937));
         System.out.println(nextPrime(7));
+        
         ArrayList<Integer> arr = primeFactorisation(50);
+        
         for (int i = 0; i < arr.size(); i++) {
             System.out.println(arr.get(i));
         }
-        System.out.println(displayPrimeFactor(arr));
+
+        String result = displayPrimeFactor(50, arr);
+        System.out.println(result);
+
     }
 
+    /**
+     * @return if n is a factor of x
+     */
     public static boolean isFactor(int x, int n) {
         if (x % n == 0)
             return true;
         return false;
     }
 
+    /**
+     * 
+     * @param n
+     * @return if a number is prime
+     */
     public static boolean isPrime(int n) {
         if (n < 2)
             return false;
@@ -33,6 +47,11 @@ public class primeFactors {
         return true;
     }
 
+    /**
+     * 
+     * @param a
+     * @return the next prime number after a
+     */
     public static int nextPrime(int a) {
         if (a < 2)
             return 2;
@@ -47,16 +66,14 @@ public class primeFactors {
         return nextPrime;
     }
 
+    /**
+     * 
+     * @param n
+     * @return arraylist of all prime factors of n
+     */
     public static ArrayList<Integer> primeFactorisation(int n) {
         ArrayList<Integer> primeFactors = new ArrayList<Integer>();
         int quot = n;
-        // for (int i = 2; i <n; i++) {
-
-        // if (isPrime(i) && isFactor(quot, i)) {
-        // primeFactors.add(i);
-        // quot = quot/i;
-        // }
-        // }
 
         int factor = 2;
         while (quot != 1) {
@@ -72,28 +89,45 @@ public class primeFactors {
 
     }
 
-   public static String displayPrimeFactor(ArrayList arrayList) {
-        String result = "";
-        int n = 0;
+    public static String displayPrimeFactor(int num, ArrayList arrayList) {
+        String result = "Factors of "+num +": \n";
+        int n = arrayList.size();
 
-        do{
-            int i = (Integer)arrayList.get(n);
+        boolean visited[] = new boolean[n];
+        Arrays.fill(visited, false);
+
+        for (int i = 0; i < n; i++) {
+            if (visited[i])
+                continue;
+
             int frequency = 0;
-            while(i == (Integer)arrayList.get(n)){
-                frequency++;
-                if(i != (Integer)arrayList.get(n+1)){
-                    result+= i + "^"+ frequency + " ";
-                    continue;
+            for (int j = i; j < n; j++) {
+                if(arrayList.get(i) == arrayList.get(j)){
+                    visited[j] = true;
+                    frequency++;
                 }
-
-                n++;
             }
+            result+= arrayList.get(i) + "^" +  frequency +" \n" ;
 
-            n++;
-        }while((Integer)arrayList.size() != n+1);
+        }
 
+        // do{
+        // int i = (Integer)arrayList.get(n);
+        // int frequency = 0;
+        // while(i == (Integer)arrayList.get(n)){
+        // frequency++;
+        // if(i != (Integer)arrayList.get(n+1)){
+        // result+= i + "^"+ frequency + " ";
+        // continue;
+        // }
+
+        // n++;
+        // }
+
+        // n++;
+        // }while((Integer)arrayList.size() != n+1);
 
         return result;
-   }
+    }
 
 }

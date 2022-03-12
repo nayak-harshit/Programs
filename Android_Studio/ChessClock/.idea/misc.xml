@@ -3,7 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Programs/Android_Studio/ChessClock/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Programs/Android_Studio/ChessClock/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2526041666666667" />
+        <entry key="..\:/Programs/Android_Studio/ChessClock/app/src/main/res/drawable/play.xml" value="0.2526041666666667" />
+        <entry key="..\:/Programs/Android_Studio/ChessClock/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Programs/Android_Studio/ChessClock/app/src/main/res/layout/activity_prefrences.xml" value="0.4" />
+        <entry key="..\:/Programs/Android_Studio/ChessClock/app/src/main/res/layout/settings_activity.xml" value="0.23645833333333333" />
+        <entry key="..\:/Programs/Android_Studio/ChessClock/app/src/main/res/xml/root_preferences.xml" value="0.23645833333333333" />
       </map>
     </option>
   </component>
@@ -16,7 +21,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.1" />
+        <option name="scale" value="0.4" />
       </ProjectState>
     </option>
   </component>
