@@ -1,3 +1,7 @@
+/*
+WAP to Multiply two integers without using multiplication, division and bitwise operators, and no loops
+*/
+
 #include <iostream>
 #include <cstdlib>
 using std::cout;

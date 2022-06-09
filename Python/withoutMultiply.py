@@ -1,4 +1,6 @@
-
+'''
+WAP to Multiply two integers without using multiplication, division and bitwise operators, and no loops
+'''
 def withoutMultiply(a,b):
     if(b==0):
         return 0
