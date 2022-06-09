@@ -1,5 +1,7 @@
 package com.example.chessclock;
 
+import static java.lang.String.format;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -253,14 +255,14 @@ public class MainActivity extends AppCompatActivity {
         int bMinutes = (int) (bTimeLeftInMillis / 1000) / 60;
         int bSeconds = (int) (bTimeLeftInMillis / 1000) % 60;
 
-        String wTimeLeftFormatted = String.format(Locale.getDefault(), "%02d:%02d",wMinutes, wSeconds );
-        String bTimeLeftFormatted = String.format(Locale.getDefault(), "%02d:%02d",bMinutes, bSeconds );
+        String wTimeLeftFormatted = format(Locale.getDefault(), "%02d:%02d",wMinutes, wSeconds );
+        String bTimeLeftFormatted = format(Locale.getDefault(), "%02d:%02d",bMinutes, bSeconds );
 
         whiteClock.setText(wTimeLeftFormatted);
         blackClock.setText(bTimeLeftFormatted);
 
-        wMovesTextView.setText(String.format("Moves: %d", wMoves));
-        bMovesTextView.setText(String.format("Moves: %d", bMoves));
+        wMovesTextView.setText(format("Moves: %d", wMoves));
+        bMovesTextView.setText(format("Moves: %d", bMoves));
 
     }
 

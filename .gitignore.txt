@@ -1,0 +1,5 @@
+/Android_Studio
+/Flutter
+/.vscode
+*.class
+*.exe
